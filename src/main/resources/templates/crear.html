@@ -34,7 +34,7 @@
 
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="text" name="password" id="password" th:field="*{contrasenia}" class="form-control" placeholder="Ingrese su contraseña" required>
+                            <input type="text" name="password" id="password" th:field="*{contrasenia}" class="form-control" placeholder="Ingrese su contraseña" min="6" required>
                         </div>
                         <br>
                         <div class="form-group">
@@ -48,8 +48,9 @@
 
                         <br>
 
-                        <div class="box-footer">
-                            <button class="btn btn-success" onclick="validarFormulario()">Guardar</button>
+                        <div class="box-footer row">
+                            <button class="btn btn-success" id="guardar-usuario" disabled>Guardar</button>
+                            <a th:href="@{/}" class="btn btn-secondary mt-2">Cancelar</a>
                         </div>
                     </form>
                     <div id="mensaje" class="mt-3"></div>
