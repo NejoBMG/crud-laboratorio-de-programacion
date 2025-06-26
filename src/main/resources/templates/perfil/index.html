@@ -10,7 +10,7 @@
     <h1>Listado de Perfiles</h1>
     <div class="row">
         <div class="col-lg-6 mb-3">
-                <a th:href="@{/nuevo}" class="btn btn-primary">Agregar Perfil</a>
+                <a th:href="@{/perfil/nuevo}" class="btn btn-primary">Agregar Perfil</a>
             </div>
             <div class="col-lg-6 text-end">
                 <a th:href="@{/usuarios}" class="btn btn-primary">Volver a usuarios</a>
@@ -29,7 +29,7 @@
             <td th:text="${perfil.id}"></td>
             <td th:text="${perfil.nombre}"></td>
             <td>
-                <a th:href="@{/editar/{id}(id=${perfil.id})}" class="btn btn-info btn-sm">Editar</a>
+                <a th:href="@{/perfil/editar/{id}(id=${perfil.id})}" class="btn btn-info btn-sm">Editar</a>
                 <a th:href="@{/{id}(id=${perfil.id})}" class="btn btn-danger btn-sm"
                    onclick="return confirm('¿Seguro que desea eliminar este perfil?')">Eliminar</a>
             </td>

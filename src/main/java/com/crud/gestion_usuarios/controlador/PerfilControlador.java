@@ -26,7 +26,7 @@ public class PerfilControlador {
         return "/perfil/index"; 
     }
 
-    @GetMapping("/nuevo")
+    @GetMapping("/perfil/nuevo")
     public String formularioRegistroPerfil(Model modelo) {
         modelo.addAttribute("perfil", new Perfil());
         return "perfil/crear";
@@ -38,7 +38,7 @@ public class PerfilControlador {
         return "redirect:/perfil";
     }
 
-    @GetMapping("/editar/{id}")
+    @GetMapping("/perfil/editar/{id}")
     public String formularioEditarPerfil(@PathVariable int id, Model modelo) {
         Perfil perfil = perfilServicio.obtenerPerfilId(id);
         modelo.addAttribute("perfil", perfil);

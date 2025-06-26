@@ -13,6 +13,7 @@ public class PerfilServicio implements PerfilServicioInterfaz{
     @Autowired
     private PerfilRespositorio perfilRespositorio;
 
+    @Override
     public List<Perfil> listar(){
         return perfilRespositorio.findAll();
     }
