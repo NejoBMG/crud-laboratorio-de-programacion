@@ -45,12 +45,12 @@ public class PerfilControlador {
         return "/perfil/editar";
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/perfil/{id}")
     public String actualizarPerfil(@PathVariable int id, @ModelAttribute("perfil") Perfil perfilActualizado) {
         Perfil perfilExistente = perfilServicio.obtenerPerfilId(id);
         perfilExistente.setNombre(perfilActualizado.getNombre());
         perfilServicio.guardarPerfil(perfilExistente);
-        return "redirect:/perfiles";
+        return "redirect:/perfil";
     }
 
     @GetMapping("/{id}")
